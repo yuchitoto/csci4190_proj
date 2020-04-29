@@ -2,9 +2,21 @@
 
 \begin{document}
   \section{Abstract}
-  some abstract I don't know what to write
+  This social network project demonstrates a simple simulation of a few traditional but important epidemic models, such as SIR, SIS and SIRS models by using a Slashdot dataset as the underlying social network to be infected. The infectious behviour will be simulated for observation in order to understand the characteristic of the three epidemic models. Stanford Network Analysis Platform and Numpy is used for simulation of the epidemic models and social network. For epidemic models that require a long running time, Scikit-Learn is used to predict upon data simulated.
   \section{Objective}
   Analysis on the 3 epidemic models, SIR, SIS, SIRS. And effect of network structure has upon the epidemic models.
   \section{Methodology}
-  SNAP, numpy, matplotlib, sklearn
+  \subsection{Dataset}
+  A Slashdot dataset is chosen to be the underlying social network of this epidemic simulation. Slashdot is a science and technology related social news website which is famous for its specific user community. In 2002, Slashdot allowed users to tag each other as friends or foes. The network used contains friends/foes links between the users of the Slashdot in Febuary, 2009\cite{leskovec2008community, snapnets}. The dataset is acquired from SNAP Stanford\cite{snapnets}.
+  \subsection{Tool}
+  Snap.py by the Stanford University was used to simulate the social network. Graph manipulation and social network simulation was done using Snap.py on Windows 10\cite{leskovec2016snap}.
+
+  Numpy is used in the program for stating the state of each node in the social network and for after-processing the simulation data\cite{2020SciPy-NMeth}.
+
+  Scikit-learn is used to do linear regression on simulation data of SIS model for prediction in order to replace long computation of equilibrium points of SIS model\cite{scikit-learn}.
+
+  A list of other libraries used for analysis of data is provided below.
+  \begin{itemize}
+    \item Matplotlib \cite{Hunter:2007}
+  \end{itemize}
 \end{document}

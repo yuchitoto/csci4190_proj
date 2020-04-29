@@ -4,6 +4,9 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage[backend=bibtex, style=ieee]{biblatex}
+
+\addbibresource{bib.bib}
 
 \title{CSCI4190 Introduction to Social Networks\\Project Report\\Task 4 Epidemics}
 \author{Yu Chi To SID: 1155110447}
@@ -17,4 +20,8 @@
   \pagenumbering{arabic}
 
   \subfile{intro}
+
+  \newpage
+  \section{References}
+  \printbibliography[heading=none]
 \end{document}
