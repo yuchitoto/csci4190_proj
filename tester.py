@@ -18,21 +18,32 @@ model="SIR"
 
 series = []
 grave = []
-while p <= 1:
-    covid = sir(p,i,r,graph)
-
-    infect, removed = covid.start(turns, initInfect, crit)
-    series.append(infect)
-    grave.append(removed)
-
-    '''rule = np.arange(0,turns+1,step=crit)
-
-    plt.plot(rule, infect, color='red', label='infected')
-    plt.plot(rule, removed, color='black', label='removed')
-    plt.show()'''
-    p += 0.1
 
 rule = np.arange(0,turns+1,step=crit)
+
+while p <= 1:
+    ift = []
+    rmd = []
+    fig, ax = plt.subplots(212)
+    for ind in range(size):
+        covid = sir(p,i,r,graph)
+        print("Epoch: {}/{}".format(ind+1,size))
+
+        infect, removed = covid.start(turns, initInfect, crit)
+        ift.append(infect)
+        rmd.append(removed)
+
+        ax[0].plot(rule,infect)
+        ax[1].plot(rule,removed)
+
+    ift = np.array(ift)
+    rmd = np.array(rmd)
+    ax[0].plot(rule,np.average(ift,axis=0))
+    ax[1].plot(rule,np.average(rmd,axis=0))
+    plt.show()
+    series.append(np.average(ift,axis=0))
+    grave.append(np.average(rmd,axis=0))
+    p += 0.1
 
 for index,i in enumerate(series,start=1):
     plt.plot(rule,i,label='p='+str(index/10))
