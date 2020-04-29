@@ -52,7 +52,7 @@ if __name__ == '__main__':
     while p <= 1:
         ift = []
         rmd = []
-        fig, ax = plt.subplots(212)
+        fig, ax = plt.subplots(2,1)
         '''for ind in range(size):
             covid = sir(p,i,r,graph)
             print("Epoch: {}/{}".format(ind+1,size))
