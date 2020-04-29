@@ -10,6 +10,10 @@ class epidemics():
         self.r = r
         self.state = np.zeros((graph.GetNodes()+1,), dtype=np.int)
         self.graph = graph
+        print("-------------------------------------")
+        print("Infection probability: {}".format(p))
+        print("Infectious period: {}".format(i))
+        print("Removed period: {}".format(r))
 
 
     def infect(self, n):

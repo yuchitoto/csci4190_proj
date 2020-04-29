@@ -6,6 +6,8 @@ import numpy as np
 class sirs(epidemics):
     def __init__(self, p, i, r, graph):
         super().__init__(p,i,r,graph)
+        print("\nSIRS model")
+        print("-------------------------------------")
 
 
     def remove(self):
