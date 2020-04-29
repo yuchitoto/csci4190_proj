@@ -6,6 +6,7 @@ from sirs import sirs
 from graph import *
 import matplotlib.pyplot as plt
 from multiprocessing import Pool, Lock, Manager
+import traceback
 
 p = 0.1
 i = 3
@@ -22,6 +23,11 @@ series = []
 grave = []
 
 rule = np.arange(0,turns+1,step=crit)
+
+
+def handle_error(e):
+    traceback.print_exception(type(e), e, e.__traceback__)
+
 
 def wuhan(lft, rmd, ind):
     covid = sir(p,i,r,graph)
@@ -65,7 +71,7 @@ if __name__ == '__main__':
                 inft = manager.list()
                 rmvd = manager.list()
                 for ind in range(size):
-                    p.apply_async(wuhan, args=(inft, rmvd, ind))
+                    p.apply_async(wuhan, args=(inft, rmvd, ind), error_callback=handle_error)
                 p.close()
                 p.join()
                 ift = inft
