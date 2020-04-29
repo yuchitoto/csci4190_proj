@@ -31,7 +31,7 @@ while p <= 1:
 rule = np.arange(0,turns+1,step=crit)
 
 for index,i in enumerate(series,start=1):
-    plt.plot(rule,infect,label='x='+str(index))
+    plt.plot(rule,i,label='x='+str(index))
     print(i)
 
 plt.legend()
