@@ -14,6 +14,8 @@ turns = 25
 crit = 1
 initInfect = 3
 
+size=25
+
 model="SIR"
 
 series = []
@@ -24,7 +26,7 @@ rule = np.arange(0,turns+1,step=crit)
 while p <= 1:
     ift = []
     rmd = []
-    fig, ax = plt.subplots(212)
+    fig, ax = plt.subplots(2,1)
     for ind in range(size):
         covid = sir(p,i,r,graph)
         print("Epoch: {}/{}".format(ind+1,size))
