@@ -32,11 +32,11 @@ class sirs(epidemics):
                 removed_perturn.append(num_removed)
                 print("turn {}: infected={} removed={}".format(i,num_infected,num_removed))
                 if num_infected==0:
-                    tmp = [ 0 for j in range(i,turn)]
-                    infected_perturn+tmp
-                    tmp = [num_removed for j in range(i,turn)]
-                    removed_perturn+tmp
-                    for j in range(i,turn):
+                    tmp = [ 0 for j in range(i+1,turn)]
+                    infected_perturn+=tmp
+                    tmp = [num_removed for j in range(i+1,turn)]
+                    removed_perturn+=tmp
+                    for j in range(i+1,turn):
                         print("turn {}: infected=0 removed={}".format(j,num_removed))
                     break
             iftd = self.transmit()
