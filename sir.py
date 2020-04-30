@@ -33,7 +33,7 @@ class sir(epidemics):
                     tmp = [0 for j in range(i+1,turn)]
                     infected_perturn+=tmp
                     tmp = [num_removed for j in range(i+1,turn)]
-                    recovered_perturn+=tmp
+                    removed_perturn+=tmp
                     for j in range(i+1,turn):
                         print("turn {}: infected=0 removed={}".format(j,num_removed))
                     break
