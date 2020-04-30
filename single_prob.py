@@ -16,7 +16,7 @@ initInfect = 3
 
 size= 50
 
-model="SIRS"
+model="SIS"
 
 series = []
 grave = []
@@ -25,7 +25,7 @@ rule = np.arange(0,turns+1,step=crit)
 
 fig, ax = plt.subplots(2,1)
 for ind in range(size):
-    covid = sirs(p,i,r,graph)
+    covid = sis(p,i,r,graph)
     print("Epoch: {}/{}".format(ind+1,size))
 
     infect, removed = covid.start(turns, initInfect, crit)
@@ -43,6 +43,6 @@ ax[0].legend()
 ax[1].legend()
 ax[0].set_title("Infected in "+model+" model of p="+str(p))
 ax[1].set_title("Removed in "+model+" model of p="+str(p))
-np.savetxt(model+str(p)+"infect.csv", series, delimiter=",")
-np.savetxt(model+str(p)+"removed.csv", grave, delimiter=",")
+np.savetxt("./simulated_data/"+model+"p"+str(int(p*10))+"infect.csv", series, delimiter=",")
+np.savetxt('./simulated_data/'+model+'p'+str(int(p*10))+'r'+str(r)+model+'s'+str(initInfect)+"removed.csv", grave, delimiter=",")
 plt.show()

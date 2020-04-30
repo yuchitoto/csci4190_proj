@@ -1,6 +1,6 @@
 import snap
 
-flnme = "Slashdot0902.txt"
+flnme = "dataset/Slashdot0902.txt"
 
 graph = snap.LoadEdgeList(snap.PNGraph, flnme, 0, 1, '\t')
 
