@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 
 p = 1.0
 i = 3
-r = 1
+r = 10
 
 turns = 100
 crit = 1
@@ -16,7 +16,7 @@ initInfect = 3
 
 size= 50
 
-model="SIS"
+model="SIRS"
 
 series = []
 grave = []
@@ -25,7 +25,7 @@ rule = np.arange(0,turns+1,step=crit)
 
 fig, ax = plt.subplots(2,1)
 for ind in range(size):
-    covid = sis(p,i,r,graph)
+    covid = sirs(p,i,r,graph)
     print("Epoch: {}/{}".format(ind+1,size))
 
     infect, removed = covid.start(turns, initInfect, crit)
