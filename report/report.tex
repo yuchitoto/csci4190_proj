@@ -5,6 +5,9 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage[backend=bibtex, style=ieee]{biblatex}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{footnote}
+\makesavenoteenv{tabular}
 
 \addbibresource{bib.bib}
 
@@ -15,11 +18,16 @@
   \pagenumbering{gobble}
   \maketitle
   \newpage
+  \pagenumbering{roman}
+  \subfile{abstract}
+  \newpage
   \tableofcontents
   \newpage
   \pagenumbering{arabic}
 
   \subfile{intro}
+
+  \subfile{exp}
 
   \newpage
   \section{References}
