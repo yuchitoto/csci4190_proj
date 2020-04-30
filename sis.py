@@ -11,9 +11,7 @@ class sis(epidemics):
 
 
     def remove(self):
-        for node in self.graph.Nodes():
-            if self.state[node.GetId()] < 0:
-                self.state[node.GetId()] += 1
+        self.state[self.state<0] += 1
 
 
     def start(self, turn=5000, infected=6, crit=20):
@@ -21,7 +19,7 @@ class sis(epidemics):
         infected_perturn = []
         removed_perturn = []
         for i in range(turn):
-            if i % crit:
+            if i % crit == 0:
                 num_infected = np.sum(self.state<0)
                 num_removed = np.sum(self.state>0)
                 infected_perturn.append(num_infected)
