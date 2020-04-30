@@ -6,9 +6,15 @@ from sirs import sirs
 from graph import *
 import matplotlib.pyplot as plt
 
+<<<<<<< Updated upstream
 p = 1.0
 i = 3
 r = 10
+=======
+p = 0.7
+i = 20
+r = 1
+>>>>>>> Stashed changes
 
 turns = 100
 crit = 1
@@ -41,8 +47,8 @@ ax[0].plot(rule,np.average(series,axis=0), linewidth=1.5, label='Ave')
 ax[1].plot(rule,np.average(grave,axis=0), linewidth=1.5, label='Ave')
 ax[0].legend()
 ax[1].legend()
-ax[0].set_title("Infected in "+model+" model of p="+str(p))
-ax[1].set_title("Removed in "+model+" model of p="+str(p))
+ax[0].set_title("Infected in "+model+" model of p="+str(p)+", r="+str(r)+", i="+str(i)+" init infected="+str(initInfect))
+ax[1].set_title("Removed in "+model+" model of p="+str(p)+", r="+str(r)+", i="+str(i)+" init infected="+str(initInfect))
 np.savetxt('./simulated_data/'+model+'p'+str(int(p*10))+'r'+str(r)+'i'+str(i)+'s'+str(initInfect)+"infect.csv", series, delimiter=",")
 np.savetxt('./simulated_data/'+model+'p'+str(int(p*10))+'r'+str(r)+'i'+str(i)+'s'+str(initInfect)+"removed.csv", grave, delimiter=",")
 plt.show()
