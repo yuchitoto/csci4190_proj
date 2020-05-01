@@ -7,6 +7,8 @@
 \usepackage[backend=bibtex, style=ieee]{biblatex}
 \usepackage[a4paper, margin=2cm]{geometry}
 \usepackage{footnote}
+\usepackage{caption}
+\usepackage{makecell}
 \makesavenoteenv{tabular}
 
 \addbibresource{bib.bib}
@@ -23,11 +25,16 @@
   \newpage
   \tableofcontents
   \newpage
+  \listoffigures
+  \newpage
   \pagenumbering{arabic}
 
   \subfile{intro}
 
   \subfile{exp}
+
+  \newpage
+  \subfile{appendix}
 
   \newpage
   \section{References}
