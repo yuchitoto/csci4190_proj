@@ -17,7 +17,9 @@ crit = 1
 initInfect = 3
 size = 25
 
-model="SIR"
+size=25
+
+model="SIS"
 
 series = []
 grave = []
@@ -30,7 +32,7 @@ def handle_error(e):
 
 
 def wuhan(lft, rmd, ind):
-    covid = sir(p,i,r,graph)
+    covid = sis(p,i,r,graph)
     print("Epoch: {}/{}".format(ind+1,size))
 
     infect, removed = covid.start(turns, initInfect, crit)
