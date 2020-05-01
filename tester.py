@@ -8,16 +8,14 @@ import matplotlib.pyplot as plt
 from multiprocessing import Pool, Lock, Manager
 import traceback
 
-p = 0.1
+p = 0.7
 i = 3
 r = 1
 
-turns = 25
+turns = 750
 crit = 1
 initInfect = 3
-size = 25
-
-size=25
+size = 5
 
 model="SIS"
 
@@ -36,9 +34,6 @@ def wuhan(lft, rmd, ind):
     print("Epoch: {}/{}".format(ind+1,size))
 
     infect, removed = covid.start(turns, initInfect, crit)
-
-    ax[0].plot(rule,infect, linestyle='--', linewidth=0.5)
-    ax[1].plot(rule,removed, linestyle='--', linewidth=0.5)
 
     lft+infect
     rmd+removed
