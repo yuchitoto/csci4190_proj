@@ -6,15 +6,9 @@ from sirs import sirs
 from graph import *
 import matplotlib.pyplot as plt
 
-<<<<<<< Updated upstream
-p = 1.0
-i = 3
-r = 10
-=======
 p = 0.7
-i = 20
+i = 3
 r = 1
->>>>>>> Stashed changes
 
 turns = 100
 crit = 1
