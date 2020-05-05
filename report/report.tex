@@ -6,10 +6,14 @@
 \usepackage{graphicx}
 \usepackage[backend=bibtex, style=ieee]{biblatex}
 \usepackage[a4paper, margin=2cm]{geometry}
-\usepackage{footnote}
+%\usepackage{footnote}
 \usepackage{caption}
 \usepackage{makecell}
-\makesavenoteenv{tabular}
+\usepackage{adjustbox}
+\usepackage{placeins}
+\usepackage{adjustbox}
+%\usepackage{tablefootnote}
+%\makesavenoteenv{tabular}
 
 \addbibresource{bib.bib}
 
@@ -33,8 +37,11 @@
 
   \subfile{exp}
 
+  \subfile{discussion}
+
   \newpage
   \subfile{appendix}
+  \FloatBarrier
 
   \newpage
   \section{References}

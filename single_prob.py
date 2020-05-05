@@ -12,7 +12,7 @@ r = 1
 
 turns = 100
 crit = 1
-initInfect = 10
+initInfect = 3
 
 size= 50
 
