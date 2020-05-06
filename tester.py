@@ -3,7 +3,7 @@ import snap
 from sir import sir
 from sis import sis
 from sirs import sirs
-from graph import *
+#from graph import *
 import matplotlib.pyplot as plt
 from multiprocessing import Pool, Lock, Manager
 import traceback
@@ -36,7 +36,6 @@ def rand_rv(graph, rm_rate=0.5):
         graph.DelEdge(i[0],i[1])
     #snap.PrintInfo(graph)
     snap.PrintInfo(graph, "Slashdot0922", "/dev/stdout", False)
-    return graph
 
 
 def handle_error(e):
@@ -44,7 +43,6 @@ def handle_error(e):
 
 
 def wuhan(lft, rmd, ind, shape):
-    rand_rv(graph)
     np.random.seed()
     covid = sirs(p,i,r,graph)
     print("Epoch: {}/{}".format(ind+1,size))
@@ -65,6 +63,9 @@ def init(l):
 
 
 if __name__ == '__main__':
+    FIn = snap.TFIn("rm.graph")
+    graph = snap.TNGraph.Load(FIn)
+    snap.PrintInfo(graph, "Slashdot0922", "/dev/stdout", False)
     lp = 0
     while lp<1:
         lp += 1
@@ -91,8 +92,8 @@ if __name__ == '__main__':
                 for ind in range(size):
                     proc.append(process.apply_async(wuhan, args=(inft, rmvd, ind, shp), error_callback=handle_error))
                 process.close()
-                for i in proc:
-                    a, b = i.get()
+                for ipro in proc:
+                    a, b = ipro.get()
                     ift.append(a)
                     rmd.append(b)
                 process.join()
@@ -104,7 +105,7 @@ if __name__ == '__main__':
                 series.append(np.average(ift,axis=0))
                 grave.append(np.average(rmd,axis=0))
 
-    np.savetxt("./simulated_data/reduced_graph/"+model+'p'+str(int(p*10))+'r'+str(r)+'i'+str(i)+'s'+str(initInfect)+"infect.csv", np.aray(ift),delimiter=',')
+    np.savetxt("./simulated_data/reduced_graph/"+model+'p'+str(int(p*10))+'r'+str(r)+'i'+str(i)+'s'+str(initInfect)+"infect.csv", np.array(ift),delimiter=',')
     np.savetxt("./simulated_data/reduced_graph/"+model+'p'+str(int(p*10))+'r'+str(r)+'i'+str(i)+'s'+str(initInfect)+"removed.csv", np.array(rmd),delimiter=',')
     for index,i in enumerate(series,start=1):
         plt.plot(rule,i,label='p='+str(p), linewidth=0.5)
