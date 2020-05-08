@@ -5,7 +5,7 @@
   \subsection{Prediction on Termination on SIS and SIRS Epidemic Simulation Model}
   Since SIS and SIRS epidemic model takes a long time to terminate, and is not able to terminate within 100 iterations, prediction of termination is done using regression. The regression is based on 1 observation.
 
-  \paragraph{Observation 1: }The decrease of peak infected value follows a concave up curve. In infected graphs of SIRS and SIS epidemic models, the peak decreases and when linked up, forms a concave up curve.
+  \paragraph{Observation 1: }The decrease of peak infectious value follows a concave up curve. In infectious graphs of SIRS and SIS epidemic models, the peak decreases and when linked up, forms a concave up curve.
 
   \begin{center}
     \includegraphics[scale=0.4]{sirsp04r1i3s3}
@@ -43,7 +43,7 @@
     \hline
     \makecell{Avg.\\Termination\\(\(t\)):} & 19.12 & 17.58 & 16.41 & 15.37 & 14.28 & 13.7 & 13.0 & 12.08 & 11.6 & 11.37\\
     \hline
-    \makecell{Avg.\\Fraction of\\ Infected:} & 0.66472 & 0.85094 & 0.92685 & 0.96445 & 0.98348 & 0.99281 & 0.99729 & 0.99925 & 0.99991 & 1.0\\
+    \makecell{Avg.\\Fraction of\\ infected:} & 0.66472 & 0.85094 & 0.92685 & 0.96445 & 0.98348 & 0.99281 & 0.99729 & 0.99925 & 0.99991 & 1.0\\
     \hline
   \end{tabular}
   \end{adjustbox}}
@@ -61,7 +61,7 @@
     \hline
     \makecell{Avg. Wave\\Between Peak(\(t\):} & 5.0 & 5.0 & 5.0 & 5.0 & 5.0 & 5.0 & 5.0 & 5.0 & 5.0 & -\footnotemark\\
     \hline
-    \makecell{Avg. Max\\Fraction\\of Infected:} & 0.50035 &  0.70016 & 0.79625 & 0.85564 & 0.90212 & 0.92747 & 0.94059 & 0.96067 & 0.96716 & 0.97088\\
+    \makecell{Avg. Max\\Fraction\\of infectious:} & 0.50035 &  0.70016 & 0.79625 & 0.85564 & 0.90212 & 0.92747 & 0.94059 & 0.96067 & 0.96716 & 0.97088\\
     \hline
   \end{tabular}
   \end{adjustbox}}
@@ -82,7 +82,7 @@
     \hline
     \makecell{Avg. Wave\\Between Peak(\(t\)):} & 4.0 & 4.0 & 4.0 & 4.0 & 4.0 & 4.0 & 4.0 & 4.0 & 4.0 & 4.0\\
     \hline
-    \makecell{Avg. Max\\Fraction\\of Infected:} & 0.52313 & 0.68936 & 0.78111 & 0.85573 & 0.89919 & 0.92837 & 0.94482 & 0.95975 & 0.96489 & 0.97377\\
+    \makecell{Avg. Max\\Fraction\\of infectious:} & 0.52313 & 0.68936 & 0.78111 & 0.85573 & 0.89919 & 0.92837 & 0.94482 & 0.95975 & 0.96489 & 0.97377\\
     \hline
   \end{tabular}
   \end{adjustbox}}
@@ -111,7 +111,7 @@
 21.88&
 31.88\\
     \hline
-    \makecell{Avg.\\Fraction of\\ Infected:}&0.94104&
+    \makecell{Avg.\\Fraction of\\ infected:}&0.94104&
 0.98917&
 0.99729&
 0.99925&
@@ -138,13 +138,13 @@
       \hline
       \makecell{Avg. Wave\\Between Peak(\(t\):} & 3.01 & 4.01 & 5.02 & 6.03 & 7.05 & 8.07 & 9.07 & 10.07 & 11.14 & 12.21 & \(\approx 23\)\footnotemark\\
       \hline
-      \makecell{Avg. Max\\Fraction\\of Infected:} & 0.54819175& 0.83670018& 0.94382144& 0.98115787& 0.99390809& 0.99800506& 0.99927344& 0.9996624&  0.99984203& 0.9999243&  1.\\
+      \makecell{Avg. Max\\Fraction\\of infectious:} & 0.54819175& 0.83670018& 0.94382144& 0.98115787& 0.99390809& 0.99800506& 0.99927344& 0.9996624&  0.99984203& 0.9999243&  1.\\
       \hline
     \end{tabular}
   \end{adjustbox}
   \footnotetext[7]{Predicted Average Termination for \(i \geq 4\) used linear regression due to a positive \(R^2\) score in linear regression, not log regression and linear data ploted are not skewed and diverged}
-  \footnotetext[8]{Non-negative slope detected in linear regression and fraction of infected reach 1.0 periodically}
-  \footnotetext[9]{Infected fraction reach 1.0 at \(t=11\) in average}
+  \footnotetext[8]{Non-negative slope detected in linear regression and fraction of infectious reach 1.0 periodically}
+  \footnotetext[9]{infectious fraction reach 1.0 at \(t=11\) in average}
   \footnotetext{Observation from figure of SIRS \(p=0.7,i=20,r=1,init\ infect=3\)}
 
   \subsubsection{SIS Simulation Result}
@@ -159,17 +159,17 @@
       \hline
       \makecell{Avg. Wave\\Between Peak(\(t\):} & 2.0055 & 3.0026 & 4.0026 & 5.0111 & 6.0280 & 7.0338 & 8.0364 & 9.1039 & 10.090 & 11.163 & \(\approx21\)\footnotemark\\
       \hline
-      \makecell{Avg. Max\\Fraction\\of Infected:} & 0.56421& 0.83312& 0.94710& 0.98251& 0.99392& 0.99800&
+      \makecell{Avg. Max\\Fraction\\of infectious:} & 0.56421& 0.83312& 0.94710& 0.98251& 0.99392& 0.99800&
  0.99928& 0.99971&  0.99985& 0.99992& 1.0000\\
       \hline
     \end{tabular}
   \end{adjustbox}
   \footnotetext[11]{For \(i\geq 5\), the peak:time graph approaches linear}
-  \footnotetext[12]{Non-negative slope detected in linear regression of data and fraction of infected reach 1.0 periodically}
-  \footnotetext[13]{Infected fraction reach 1.0 at \(t=11\) in average}
+  \footnotetext[12]{Non-negative slope detected in linear regression of data and fraction of infectious reach 1.0 periodically}
+  \footnotetext[13]{infectious fraction reach 1.0 at \(t=11\) in average}
   \footnotetext{Observation from figure of SIS \(p=0.7,i=20,r=1,init\ infect=3\)}
 
-  \subsection{Effect of Numbers of Initial Infected}
+  \subsection{Effect of Numbers of Initial infectious}
   Model Simulation Parameters: \(p=0.7, r=1, i=3\)\\
   The following are the result from 50 simulations of each \(s\) levels of each epidemic model respectively.
 
@@ -182,7 +182,7 @@
     \hline
     \makecell{Avg.\\Termination\\(\(t\)):} & 13.48 & 13.06 & 12.84 & 12.58 & 12.64 & 12.64 & 12.42 & 12.5 & 12.5 & 12.32\\
     \hline
-    \makecell{Avg.\\Fraction of\\ Infected:}& 0.99727 &
+    \makecell{Avg.\\Fraction of\\ infected:}& 0.99727 &
 0.99731 &
 0.99729 &
 0.99730 &
@@ -209,7 +209,7 @@
       \hline
       \makecell{Avg. Wave\\Between Peak(\(t\):}& 5.0267& 5.0189& 5.0211& 5.0178& 5.0211& 5.0178& 5.0267& 5.0356& 5.03& 5.0355\\
       \hline
-      \makecell{Avg. Max\\Fraction\\of Infected:}& 0.946& 0.94776& 0.94382& 0.94591& 0.94373& 0.94148& 0.93761& 0.93893& 0.94044& 0.93847\\
+      \makecell{Avg. Max\\Fraction\\of infectious:}& 0.946& 0.94776& 0.94382& 0.94591& 0.94373& 0.94148& 0.93761& 0.93893& 0.94044& 0.93847\\
       \hline
     \end{tabular}
   \end{adjustbox}}
@@ -227,7 +227,7 @@
       \hline
       \makecell{Avg. Wave\\Between Peak(\(t\):}& 4.0061& 4.0052& 4.0026& 4.0026& 4.007& 4.0052& 4.0061& 4.007& 4.0052& 4.007\\
       \hline
-      \makecell{Avg. Max\\Fraction\\of Infected:}& 0.94478& 0.94469& 0.9471& 0.94224& 0.94001& 0.94015& 0.94142& 0.94017& 0.93989& 0.93943\\
+      \makecell{Avg. Max\\Fraction\\of infectious:}& 0.94478& 0.94469& 0.9471& 0.94224& 0.94001& 0.94015& 0.94142& 0.94017& 0.93989& 0.93943\\
       \hline
     \end{tabular}
   \end{adjustbox}}
@@ -243,17 +243,84 @@
       \hline
       SIRS & r=1 & r=2 & r=3 & r=4 & r=5 & r=6 & r=7 & r=8 & r=9& r=10\\
       \hline
-      \makecell{Predicted\\Avg.\\Termination\\(\(t\)):}\\
+      \makecell{Predicted\\Avg.\\Termination\\(\(t\)):} & \(4.86 + e^{26.881}\) & \(4.8 + e^{25.254}\) & \(690.55\)\footnotemark & 12.72\footnotemark & 13.46& 12.9& 12.74& 12.82& 12.96& 12.98\\
       \hline
-      \makecell{Avg. First\\Infection\\Peak:}\\
+      \makecell{Avg. First\\Infection\\Peak:} & 4.86& 4.8& 4.9& 4.88& 4.88& 4.82& 4.86& 4.88& 4.88& 4.9\\
       \hline
-      \makecell{Avg. Wave\\Between Peak(\(t\)):}\\
+      \makecell{Avg. Wave\\Between Peak(\(t\)):}\footnotemark & 5.0211& 6.0467& 7.2965& 8.7042& 10.3333 & - & - & - & - & -\\
       \hline
-      \makecell{Avg. Max\\Fraction\\of Infected:}\\
+      \makecell{Avg. Max\\Fraction\\of infectious:}& 0.94382& 0.94588& 0.95088& 0.94825& 0.94518& 0.94684& 0.94659& 0.94637& 0.94475& 0.94523\\
       \hline
     \end{tabular}
   \end{adjustbox}
+  \footnotetext[15]{Linear regression used due to the large s.d. of time and magnitude of peaks}
+  \footnotetext[16]{0.88 fraction of simulations terminates}
+  \footnotetext{r=6 to r=10 have all simulations terminates without second peak arising}
 
   \subsection{Effect of Network Structure on Epidemic Models}
+  New Network Statistics after removing 50\% edges from original graph:
+
+  ~
+
+  \begin{tabular}{|l|l|}
+    \hline
+    Slashdot0922: & Directed\\
+    \hline
+    Nodes: & 82168\\
+    \hline
+    Edges: & 474232\\
+    \hline
+    Zero Degree Nodes: & 1791\\
+    \hline
+    Zero In-degree Nodes: & 1817\\
+    \hline
+    Zero Out-degree Nodes: & 13463\\
+    \hline
+    Non-zero In-Out Degree Nodes: & 68679\\
+    \hline
+    Unique Directed Edges: & 474232\\
+    \hline
+    Unique Undirected Edges: & 394657\\
+    \hline
+    Self Edges: & 68568\\
+    \hline
+    BiDir Edges: & 227718\\
+    \hline
+    Closed Triangles: & 41812\\
+    \hline
+    Open Triangles: & 23656244\\
+    \hline
+    Fraction of Closed Triads: & 0.001764\\
+    \hline
+    Connected Component Size: & 0.945039\\
+    \hline
+    Strongly Connected Component Size: & 0.505501\\
+    \hline
+    Approximate Full Diameter: & 11\\
+    \hline
+    90\% Effective Diameter: & 5.024003\\
+    \hline
+  \end{tabular}
+
+  ~
+
+  We can see that the 90\% effective diameter increased from 4.688472 to 5.024003, and the size of largest strongly connected component decreased from 0.86782 to 0.505501. This shows a sparser network, and with 0.0218 fraction of nodes are isolated.
+
+  \subsubsection{SIRS \(p=0.7, r=1, i=3, s=3\) Simulation Result}
+  The following result is based on 25 simulations of SIRS model with \(p=0.7, r=1, i=3, s=3\).
+
+  ~
+
+  \begin{tabular}{|l|l|}
+    \hline
+    Predicted Avg. Termination(\(t\)): & \(5.36 + e^{24.509}\)\\
+    \hline
+    Avg. Max Fraction of infectious: & 0.85682\\
+    \hline
+    Avg. First Infection Peak: & 5.36\\
+    \hline
+    Avg. Max Fraction of infectious: & 5.0333\\
+    \hline
+  \end{tabular}
 
 \end{document}

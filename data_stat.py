@@ -2,9 +2,12 @@ import numpy as np
 
 data = []
 for i in range(1,11):
-    data.append(np.loadtxt("simulated_data/SIRp{}r1i3s3infected.csv".format(i),delimiter=','))
+    data.append(np.loadtxt("simulated_data/SIRSp7r{}i3s3infect.csv".format(i),delimiter=','))
 
-print(np.array(data).shape)
+#data = [np.loadtxt("./simulated_data/reduced_graph/SIRSp7r1i3s3infect.csv",delimiter=',')]
+
+for i in data:
+    print(i.shape)
 amax = []
 st = []
 alx = []
@@ -43,5 +46,23 @@ for i in alx:
         for k in range(len(j)-1):
             btmp.append(j[k+1]-j[k])
     btmp = np.array(btmp)
+    #print(btmp)
+    #print("& {}".format(btmp.mean()),end='')
     print("& {}".format(np.around(btmp.mean(),decimals=4)),end='')
 print()
+
+
+def term():
+    for i in data:
+        if np.amin(i)==0:
+            tmp=[]
+            for j in i:
+                tmp.append(np.argmin(j))
+            tmp = np.array(tmp)
+            print("& {}".format(tmp.mean()),end='')
+        else:
+            print("& False",end='')
+    print()
+
+
+term()

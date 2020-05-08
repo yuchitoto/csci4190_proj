@@ -5,9 +5,8 @@
   Analysis on the 3 epidemic models, SIR, SIS, SIRS. And effect of network structure has upon the epidemic models.
   \section{Methodology}
   \subsection{Data Source}
-  A Slashdot dataset is chosen to be the underlying social network of this epidemic simulation. Slashdot is a science and technology related social news website which is famous for its specific user community. In 2002, Slashdot allowed users to tag each other as friends or foes. The network used contains friends/foes links between the users of the Slashdot in Febuary,
-  \section{Dataset Statistics}
-  The table below shows the data generated using SNAP.py on the dataset Slashdot0922. 2009\cite{leskovec2008community, snapnets}. The dataset is acquired from SNAP Stanford\cite{snapnets}.
+  A Slashdot dataset is chosen to be the underlying social network of this epidemic simulation. Slashdot is a science and technology related social news website which is famous for its specific user community. In 2002, Slashdot allowed users to tag each other as friends or foes. The network used contains friends/foes links between the users of the Slashdot in Febuary\cite{leskovec2008community}.
+
   \subsection{Tool}
   Snap.py by the Stanford University was used to simulate the social network. Graph manipulation and social network simulation was done using Snap.py on Windows 10 and Windows Subsystem for Linux\cite{leskovec2016snap}.
 
@@ -21,15 +20,16 @@
   \end{itemize}
 
   \subsection{Experiment Design}
-  In this project, the three SIR, SIRS, SIS epidemic models are simulated using SNAP.py on Python 3. Every node in the network is assumed to be a person and every directed edge in the network is assumed to be a contact. Initially, all nodes in the network is assumed susceptible to the epidemic(S). A random number of \(s\) people in the network would be infected(I) by the epidemic. And for each contact, the disease will have \(p\) probability to transmit to the uninfected nodes in each wave(\(t\)). For each infected person, they will be infectious for \(i\) waves. And if they have a temperary immune to the epidemic after infection, the immunity will exist for \(r\) days. The epidemic ends at wave \(t_end\) if there is no infected(I) in network.
+  In this project, the three SIR, SIRS, SIS epidemic models are simulated using SNAP.py on Python 3. Every node in the network is assumed to be a person and every directed edge in the network is assumed to be a contact. Initially, all nodes in the network is assumed susceptible to the epidemic(S). A random number of \(s\) people in the network would be infectious(I) by the epidemic. And for each contact, the disease will have \(p\) probability to transmit to the uninfected nodes in each wave(\(t\)). For each infected person, they will be infectious for \(i\) waves. And if they have a temperary immune to the epidemic after infection, the immunity will exist for \(r\) days. The epidemic ends at wave \(t_end\) if there is no infectious(I) in network.
 
-  A series of tests will be conducted by changing parameters \(p, r, i, s\) for observation on SIR, SIRS and SIS epidemic models. The observation will be based on average amount of infected(I) and time(\(t\)) needed for the epidemic to end and no nodes in the network are infected.
+  A series of tests will be conducted by changing parameters \(p, r, i, s\) for observation on SIR, SIRS and SIS epidemic models. The observation will be based on average amount of infectious(I) and time(\(t\)) needed for the epidemic to end and no nodes in the network are infected.
 
-  As the time(\(t\)) needed for epidemic to end in SIRS and SIS models is large, the amount of iterations of infection waves will be limited to 100 iterations and the termination time of the epidemics will be predicted using regression on peak infected values and the number of infected of each wave.
+  As the time(\(t\)) needed for epidemic to end in SIRS and SIS models is large, the amount of iterations of infection waves will be limited to 100 iterations and the termination time of the epidemics will be predicted using regression on peak infectious values and the number of infectious of each wave.
 
   The effect of network structure will also be investigated by randomly removing or adding a certain amount of edges to increase and decrease effective diameter of the network and the size of stronly connected components to investigate the effect of network structure in epidemics.
 
   \section{Dataset Statistics}
+  The table below shows the data generated using SNAP.py on the dataset Slashdot0922. 2009\cite{leskovec2008community, snapnets}. The dataset is acquired from SNAP Stanford\cite{snapnets}.
   \subsection{Graph Statistics}
   The table below shows statistics of the Slashdot0922 dataset\cite{snapnets} generated using SNAP.py\cite{leskovec2016snap}.
 
