@@ -2,7 +2,7 @@ from sklearn.linear_model import LinearRegression
 import numpy as np
 import matplotlib.pyplot as plt
 
-data = np.loadtxt("simulated_data/SISp7r1i3s10infect.csv",delimiter=',')
+data = np.loadtxt("simulated_data/SISp7r1i3s1infect.csv",delimiter=',')
 
 y = []
 x = []
